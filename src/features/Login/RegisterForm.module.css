@@ -1,0 +1,119 @@
+.formContainer {
+  max-width: 420px;
+  margin: 50px auto;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(43, 138, 224, 0.2);
+  border-top: 6px solid #2b8ae0;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Animación entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo */
+.logo {
+  width: 85px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+/* Título */
+.formTitle {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #2b8ae0;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #cfd9e8;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #2b8ae0;
+  box-shadow: 0 0 6px rgba(43, 138, 224, 0.3);
+  outline: none;
+}
+
+/* Select */
+.selectRol {
+  margin-bottom: 20px;
+}
+
+/* Botón */
+.loginButton {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #2b8ae0, #63b3f4);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.loginButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1e6bb8, #4da6e9);
+  transform: translateY(-2px);
+}
+
+.loginButton:disabled {
+  background: #a5c9eb;
+  cursor: not-allowed;
+}
+/* Logo con efecto 3D */
+.logo {
+  width: 85px;
+  height: auto;
+  margin-bottom: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+}
+
+/* Logo con efecto de giro */
+.logo {
+  width: 110px; /* un poco más grande */
+  height: auto;
+  margin-bottom: 12px;
+  animation: spin3d 6s linear infinite; /* giro infinito */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.35));
+}
+
+/* Animación de giro en eje Y */
+@keyframes spin3d {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+

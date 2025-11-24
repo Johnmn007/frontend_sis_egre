@@ -1,0 +1,112 @@
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
+}
+
+.formGroup {
+  margin-bottom: 22px;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.select,
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.select:focus,
+.input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.25);
+  outline: none;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111827;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.radioLabel:hover {
+  color: #4f46e5;
+}
+
+.radioLabel input[type="radio"] {
+  accent-color: #4f46e5; /* Moderno, solo para navegadores que soportan */
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  gap: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 13px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btnSave {
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  color: #fff;
+}
+
+.btnSave:hover {
+  background: linear-gradient(135deg, #3730a3, #312e81);
+  transform: translateY(-2px);
+}
+
+.btnCancel {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.btnCancel:hover {
+  background: #e5e7eb;
+  transform: translateY(-2px);
+}

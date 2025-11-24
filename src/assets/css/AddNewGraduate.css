@@ -1,0 +1,65 @@
+/* 🎯 Contenedor principal */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🎯 Grupo de botones (arriba a la derecha) */
+.button-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* 🎯 Estilos base para botones */
+button {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff; /* color de texto por defecto */
+}
+
+/* ================================
+   🌟 Botón "Continuar"
+================================= */
+.add-carrera-btn {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+.add-carrera-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #003d80);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 123, 255, 0.6);
+}
+
+.add-carrera-btn:active {
+  transform: scale(0.96);
+}
+
+/* ================================
+   🌟 Botón "Guardar"
+================================= */
+.submit-btn {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #218838, #155724);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(40, 167, 69, 0.6);
+}
+
+.submit-btn:active {
+  transform: scale(0.96);
+}

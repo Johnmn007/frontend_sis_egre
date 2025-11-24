@@ -1,0 +1,21 @@
+.deleteBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: none;
+  border-radius: 30%;
+  background: linear-gradient(135deg, #ef4444, #dc2626); /* rojo degradado */
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.deleteBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.deleteBtn:active {
+  transform: scale(0.95);
+}

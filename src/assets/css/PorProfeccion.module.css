@@ -1,0 +1,33 @@
+.chartWrapper {
+    width: 480px; /* Un poco más ancho */
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chartContainer {
+    width: 450px;
+    height: 300px; /* Más altura para mejor visualización */
+    overflow-x: auto; /* Permite desplazamiento si es necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.icon {
+    font-size: 28px;
+    color: #007bff;
+}

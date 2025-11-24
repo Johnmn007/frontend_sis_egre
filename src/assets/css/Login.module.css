@@ -1,0 +1,182 @@
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb, #3b82f6);
+  padding: 20px;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 880px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Left Side - Image */
+.imageContainer {
+  width: 45%;
+  background: linear-gradient(180deg, #1e3a8a, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.imageBox {
+  width: 80%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageIcon {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2));
+}
+
+/* Right Side - Form */
+.formContainer {
+  width: 55%;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.inputGroup {
+  margin-top: 18px;
+}
+
+.label {
+  display: block;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.input,
+.selectRol {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  margin-top: 18px; /* 🔹 separa el select de los inputs */
+}
+.input:focus,
+.selectRol:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+}
+
+.forgotPassword {
+  text-align: right;
+  color: #2563eb;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: color 0.3s ease;
+}
+
+.forgotPassword:hover {
+  color: #1e40af;
+}
+
+.loginButton {
+  margin-top: 25px;
+  width: 100%;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.loginButton:hover {
+  background: linear-gradient(90deg, #172554, #1e3a8a);
+  transform: translateY(-2px);
+}
+
+.signupText {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.signupLink {
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.signupLink:hover {
+  color: #1e40af;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    max-width: 420px;
+  }
+
+  .imageContainer {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .formContainer {
+    width: 100%;
+    padding: 30px 25px;
+  }
+
+  .imageIcon {
+    width: 200px;
+    height: 200px;
+  }
+}

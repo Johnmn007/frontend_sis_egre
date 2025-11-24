@@ -1,0 +1,110 @@
+/* Contenedor centrado sin afectar Navigation */
+.centerContainer {
+    max-width: 1000px;
+    width: 100%;
+    background-color: #f8f9fa;
+    border-radius: 40px;
+    box-shadow: 0px 4px 8px rgb(3, 1, 105);
+    padding: 30px;
+  
+    /* Centrar en la pantalla */
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilo del título */
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+  
+  /* Botón de agregar gestión */
+  .addButton {
+    background-color: #007bff;
+    text-decoration: none;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .addButton:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para la tabla */
+  .tableContainer {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 30px;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+  }
+  
+  th {
+    background-color: #0c75d1;
+    color: white;
+  }
+  
+  /* Botones de acción */
+  .editButton {
+    background-color:  #007bff !important;
+    border-color:  #007bff !important;
+    color: white !important;
+    margin-left: 5px;
+  }
+  
+  .editButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .deleteButton {
+    background-color: red !important;
+    border-color: red !important;
+    color: white !important;
+    margin-left: 5px;
+  }
+  
+  .deleteButton:hover {
+    background-color: #c82333;
+  }
+  
+  /* Ajustes responsive */
+  @media (max-width: 768px) {
+    .centerContainer {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    th, td {
+      padding: 6px;
+      font-size: 14px;
+    }
+  
+    .addButton {
+      width: 100%;
+      text-align: center;
+      display: block;
+      margin-top: 20px;
+    }
+  }
+  

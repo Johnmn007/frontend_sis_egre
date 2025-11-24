@@ -1,0 +1,179 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 24, 39, 0.6); /* Fondo oscuro más marcado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  z-index: 1000;
+  backdrop-filter: blur(6px); /* ✨ Difuminado elegante */
+}
+
+.modalContent {
+  background: linear-gradient(135deg, #ffffff, #f9fafb); /* Fondo sutil con gradiente */
+  width: 92%;
+  max-width: 950px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 20px; /* Bordes más suaves */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  position: relative;
+  animation: fadeIn 0.35s ease;
+  transition: transform 0.3s ease;
+}
+
+.modalContent:hover {
+  transform: translateY(-2px); /* Sutil efecto al pasar el mouse */
+}
+
+.modalTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1e293b;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 12px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #6b7280;
+  transition: 0.25s ease;
+}
+
+.closeButton:hover {
+  color: #ef4444; /* Rojo elegante en hover */
+  transform: scale(1.15);
+}
+
+/* === Secciones dentro del modal === */
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dataGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.dataItem {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.25s ease;
+}
+
+.dataItem:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.dataItem strong {
+  display: block;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+/* === Lista de egresados === */
+.egresadoCard {
+  list-style: none; /* ❌ Quitar viñeta */
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px;
+  background: #f8fafc;
+  box-shadow: 0 2px 8px rgba(115, 114, 114, 0.05);
+  transition: transform 0.25s ease;
+  margin-bottom: 20px; /* ✅ Más separación entre tarjetas */
+}
+
+.egresadoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tituloBox {
+  margin-top: 14px;
+  padding: 14px;
+  border-left: 4px solid #3b82f6;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tituloBox strong {
+  color: #1d4ed8;
+}
+
+/* Botones de acción */
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.submitBtn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-1px);
+}
+
+.cancelBtn {
+  background: #f3f4f6;
+  color: #374151;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.cancelBtn:hover {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+/* Animación modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

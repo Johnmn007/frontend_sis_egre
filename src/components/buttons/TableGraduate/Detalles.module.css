@@ -1,0 +1,32 @@
+/* Botón moderno para detalles */
+.detallesBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #2563eb; /* azul moderno */
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.25);
+}
+
+.detallesBtn:hover {
+  background: #1d4ed8; /* azul más oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(29, 78, 216, 0.3);
+}
+
+.detallesBtn:active {
+  transform: scale(0.97);
+}
+
+.detallesBtn svg {
+  stroke-width: 2.2px; /* ícono más definido */
+}
+

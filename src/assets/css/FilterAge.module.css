@@ -1,0 +1,30 @@
+select {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  select:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+  }
+  
+  option {
+    font-size: 14px;
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  select:hover {
+    border-color: #0056b3;
+  }
+  

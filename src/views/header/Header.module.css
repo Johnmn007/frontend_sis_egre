@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-between; /* Alinea el botón a la izquierda y el contenido al centro */
+  align-items: center;
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  width: 100%-25px;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  justify-content: center; /* Centra el contenido */
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.logo {
+  height: 40px;
+}
+
+/* Nuevo: botón de cierre de sesión */
+.logoutButton {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.logoutButton:hover {
+  background-color: #c0392b;
+}

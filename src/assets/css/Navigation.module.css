@@ -1,0 +1,107 @@
+.nav {
+  background-color: #2f2f31;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 250px;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.nav.collapsed {
+  width: 60px;
+}
+
+/* Oculta solo el texto, no los iconos */
+.text{
+  margin-left: 10px;
+}
+.nav.collapsed .text {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  
+  transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+/* Mantiene los iconos siempre visibles */
+.nav.collapsed .icon {
+  margin-right: 0; /* Evita espacios innecesarios */
+  
+}
+
+/* Expande el menú al hacer hover */
+.nav:hover {  
+  width: 250px; 
+}
+
+/* Muestra el texto cuando el usuario pasa el mouse */
+.nav:hover .text {
+  opacity: 1;
+  width: auto;
+  transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: background 0.3s, padding 0.3s;
+  white-space: nowrap;
+}
+
+.link:hover {
+  background: rgba(248, 248, 250, 0.2);
+}
+
+.icon {
+  font-size: 1.5em;
+  transition: margin-right 0.3s ease-in-out;
+}
+
+/* Dropdown submenu */
+.dropdown {
+  width: 100%;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 32px; /* sangría para distinguirlo */
+  gap: 6px;
+}
+
+.subLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: background 0.2s ease-in-out;
+  
+  /* Evitar azul y subrayado */
+  color: #ffffff;       /* blanco */
+  text-decoration: none;
+}
+
+.subLink:hover {
+  background: #737171;     /* un gris oscuro al pasar el mouse */
+  color: #ffffff;       /* mantener blanco */
+}
+

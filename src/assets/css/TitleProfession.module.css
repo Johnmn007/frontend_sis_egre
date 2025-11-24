@@ -1,0 +1,75 @@
+/* TitleProfession.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #0d47a1; /* Azul institucional */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #1976d2;
+  padding-bottom: 0.5rem;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.dataGrid {
+  background: #f9fbff; /* Fondo suave */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+/* Personalización de DataGrid */
+.dataGrid .MuiDataGrid-columnHeaders {
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.dataGrid .MuiDataGrid-row:nth-of-type(odd) {
+  background-color: #f4f8ff; /* azul muy claro */
+}
+
+.dataGrid .MuiDataGrid-row:hover {
+  background-color: #e3f2fd; /* celeste */
+  transition: background 0.2s ease;
+}
+
+.dataGrid .MuiDataGrid-cell {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Paginación */
+.dataGrid .MuiTablePagination-root {
+  border-top: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.dataGrid .MuiPaginationItem-root {
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.dataGrid .Mui-selected {
+  background-color: #1976d2 !important;
+  color: white !important;
+}

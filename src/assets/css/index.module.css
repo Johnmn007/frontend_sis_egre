@@ -1,0 +1,61 @@
+
+/* Contenedor principal */
+.pageContainer {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f8f9; /* Fondo claro */
+    position: relative;
+    z-index: 0;
+    /* background-image: url("https://tse2.mm.bing.net/th/id/OIP.Y2U3JmanAOn7ZyuhIEeKKwHaEK?pid=Api&P=0&h=180");  */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Menú lateral */
+.menu {  
+    width: 260px;
+    transition: width 0.3s ease;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.menuChico { 
+    width: 80px;
+    transition: width 0.3s ease;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de la parte derecha */
+.section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ocupar todo el espacio restante */
+    transition: margin-left 0.3s ease;
+}
+
+/* Header y footer dinámicos */
+.header, .footer {
+    width: 100%; /* Ocupar todo el ancho disponible */
+    
+    text-align: center;
+   
+}
+
+/* Contenido principal */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    max-width: 1500px;
+}
+
+/* Footer fijo */
+
+
+/* Ajustes cuando el menú está reducido */
+.menuChico + .section {
+    width: calc(100% - 80px);
+}

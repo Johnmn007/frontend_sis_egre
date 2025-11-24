@@ -1,0 +1,114 @@
+/* Contenedor general sin fondo transparente */
+.modalWrapper {
+  display: grid;
+  place-items: center;
+  min-height: 100vh; /* ocupa toda la pantalla */
+  padding: 1rem;
+  background: #f3f4f6; /* fondo sólido gris claro */
+}
+
+/* Caja del modal */
+.modalContainer {
+  background: linear-gradient(145deg, #ffffff, #f9fafb);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+  width: 480px;
+  max-width: 95%;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  animation: fadeIn 0.35s ease;
+}
+
+/* Header */
+.modalHeader {
+  background: #171717;
+  color: rgba(243, 234, 234, 0.786);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Cuerpo */
+.modalBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+input,
+select {
+  width: 100%;
+  height: 44px; /* 🔹 mismo alto para todos */
+  padding: 0 14px; /* 🔹 ajusta solo a los lados */
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: #f9fafb;
+  box-sizing: border-box; /* 🔹 evita diferencias por padding/border */
+  transition: all 0.25s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+  outline: none;
+}
+
+
+/* Footer */
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.cancelBtn {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.cancelBtn:hover {
+  background: #e5e7eb;
+}
+
+.saveBtn {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.saveBtn:hover {
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+  transform: translateY(-2px);
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

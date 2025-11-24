@@ -1,0 +1,32 @@
+.chartWrapper {
+    width: 480px; /* Tamaño mediano */
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chartContainer {
+    width: 450px; /* Mediano */
+    height: 300px; /* Mediano */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-size: 24px; /* Ajustado */
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.icon {
+    font-size: 28px;
+    color: #007bff;
+}

@@ -1,0 +1,104 @@
+.centerContainer {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.centerContainer:hover {
+  transform: translateY(-2px);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.addButton {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #3498db;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.addButton:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.tableContainer {
+  overflow-x: auto;
+  border-radius: 15px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 15px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.tableHeader {
+  background: #3498db;
+  color: white;
+  text-align: left;
+}
+
+.table th, 
+.table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.table tr:hover {
+  background: #f5faff;
+}
+
+.actionButton {
+  background: #0f31f1;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.actionButton:hover {
+  background: #0da5d498;
+  transform: scale(1.05);
+}
+
+.deleteButton {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.deleteButton:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+.text-center {
+  text-align: center;
+  color: #7f8c8d;
+}

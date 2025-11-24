@@ -1,0 +1,18 @@
+
+.container{
+  
+  margin-right: 20px;
+}
+
+.conntenPoblacion{
+  justify-items: center;
+  
+}
+
+.section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 25px;
+}
