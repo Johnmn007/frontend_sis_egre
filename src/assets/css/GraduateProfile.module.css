@@ -24,7 +24,7 @@
 .centeredImage {
   width: 300px;
   margin-bottom: 20px;
-  animation: rotateY360 s linear infinite;
+  animation: rotateY360 3s linear infinite;
   justify-content: center;
   margin-right: 10px;
 }
