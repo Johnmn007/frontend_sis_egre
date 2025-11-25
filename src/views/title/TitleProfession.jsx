@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import { DataGrid } from "@mui/x-data-grid";
 import { TextField } from "@mui/material";
@@ -41,6 +41,34 @@ const TitleProfession = () => {
   const [selectedStudentId, setSelectedStudentId] = useState(null);
   const rol = localStorage.getItem("rol")?.replace(/"/g, "").trim();
 
+  // 🔹 Cargar titulados CON useCallback
+  const fetchEgresados = useCallback(async () => {
+    try {
+      setLoading(true);
+      const data = await getEgresadosTituladosCarrera(id);
+      
+      const formatted = data.map((c, index) => ({
+        id: c.id,
+        idStudent: c.student?.id || "",
+        index: index + 1,
+        firstName: c.student?.firstName || "",
+        lastName: c.student?.lastName || "",
+        dni: c.student?.dni || "",
+        email: c.student?.email || "",
+        ageTitle: c.ageTitle,
+        numberTitle: c.numberTitle,
+        numberResolution: c.numberResolution,
+        Observacion: c.Observacion,
+      }));
+
+      setRows(formatted);
+    } catch (err) {
+      console.error("Error al obtener titulados:", err);
+    } finally {
+      setLoading(false);
+    }
+  }, [id]);
+
   const columns = [
     { field: "index", headerName: "N°", width: 70 },
     { field: "firstName", headerName: "Nombre", width: 150 },
@@ -71,8 +99,6 @@ const TitleProfession = () => {
             )}
             <ReportePdf studentId={params.row.idStudent} setSelectedStudentId={setSelectedStudentId}/>
           </>
-          
-
         </div>
       ),
     },
@@ -92,37 +118,9 @@ const TitleProfession = () => {
     fetchProfession();
   }, [id]);
 
-  // 🔹 Cargar titulados
-  const fetchEgresados = async () => {
-    try {
-      setLoading(true);
-      const data = await getEgresadosTituladosCarrera(id);
-      
-      const formatted = data.map((c, index) => ({
-        id: c.id,
-        idStudent: c.student?.id || "",
-        index: index + 1,
-        firstName: c.student?.firstName || "",
-        lastName: c.student?.lastName || "",
-        dni: c.student?.dni || "",
-        email: c.student?.email || "",
-        ageTitle: c.ageTitle,
-        numberTitle: c.numberTitle,
-        numberResolution: c.numberResolution,
-        Observacion: c.Observacion,
-      }));
-
-      setRows(formatted);
-    } catch (err) {
-      console.error("Error al obtener titulados:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
     if (id) fetchEgresados();
-  }, [id]);
+  }, [id, fetchEgresados]);
 
   // 🔹 Filtrado por buscador
   const filteredRows = rows.filter((row) => {

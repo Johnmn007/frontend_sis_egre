@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { getRol ,deleteRol  } from "../../service/Rol";
+import { getRol   } from "../../service/Rol";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import style from "../../assets/css/Modalidades.module.css";
-import Swal from "sweetalert2";
+
 
 const ListRol=()=>{
     

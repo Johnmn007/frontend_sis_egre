@@ -7,7 +7,7 @@ import TableCarrera from "../../features/Graduate/add/TableCarrera";
 
 import { DataContext } from "../../context/Context";
 import { updateCountStudents } from "../../service/Count";
-import { updateEgresados } from "../../service/Egresados";
+// import { updateEgresados } from "../../service/Egresados";
 import { updateStudent } from "../../service/Student";
 
 import { getListId } from "../../service/getList";
@@ -72,7 +72,8 @@ export default function ViewStudent() {
 
   const GuardarStudent = async () => {
     try {
-      const resNewStudent = await updateStudent(id,newStudent);
+      // const resNewStudent = await updateStudent(id,newStudent);
+      await updateStudent(id,newStudent);
 
       // for (let i = 0; i < studentCarrera.length; i++) {
       //   studentCarrera[i].idStudent = resNewStudent.id;
