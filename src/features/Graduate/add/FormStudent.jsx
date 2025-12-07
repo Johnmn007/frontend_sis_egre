@@ -83,17 +83,19 @@ const FormStudent = ({ newStudent, setNewStudent }) => {
           value={newStudent.lastName}
           onChange={handleStudentChange}
           required
-        />
+          />
         <label>Apellidos</label>
       </div>
 
       <div className={style.formGroup}>
-        <select name="gender" value={newStudent.gender} onChange={handleStudentChange} required>
-          <option value="">Selecciona</option>
+        <select 
+        style={{ color: '#4873e0ff' }}
+        name="gender" value={newStudent.gender} onChange={handleStudentChange} required>
+          <option value="">Seleccionar género</option>
           <option value="MASCULINO">MASCULINO</option>
           <option value="FEMENINO">FEMENINO</option>
         </select>
-        <label>Género</label>
+        {/* <label>Género</label> */}
       </div>
 
       <div className={style.formGroup}>
@@ -150,33 +152,39 @@ const FormStudent = ({ newStudent, setNewStudent }) => {
         <label>Celular</label>
       </div>
       <div className={style.formGroup}>
-        <select name="id_departamento" value={newStudent.id_departamento} onChange={handleStudentChange} required>
-          <option value="">Selecciona</option>
+        <select 
+        style={{ color: '#4873e0ff' }}
+        name="id_departamento" value={newStudent.id_departamento} onChange={handleStudentChange} required>
+          <option  value="">Seleccionar Departamento</option>
           {departamentos.map((dep) => (
             <option key={dep.id} value={dep.id}>{dep.name}</option>
           ))}
         </select>
-        <label>Departamento</label>
+        {/* <label>Departamento</label> */}
       </div>
 
       <div className={style.formGroup}>
-        <select name="id_Provincia" value={newStudent.id_Provincia} onChange={handleStudentChange} required>
-          <option value="">Selecciona</option>
+        <select 
+        style={{ color: '#4873e0ff' }}
+        name="id_Provincia" value={newStudent.id_Provincia} onChange={handleStudentChange} required>
+          <option value="">Seleccionar Provincia</option>
           {provincias.map((prov) => (
             <option key={prov.id} value={prov.id}>{prov.name}</option>
           ))}
         </select>
-        <label>Provincia</label>
+        {/* <label>Provincia</label> */}
       </div>
 
       <div className={style.formGroup}>
-        <select name="id_distrito" value={newStudent.id_distrito} onChange={handleStudentChange} required>
-          <option value="">Selecciona</option>
+        <select 
+        style={{ color: '#4873e0ff' }}
+        name="id_distrito" value={newStudent.id_distrito} onChange={handleStudentChange} required>
+          <option value="">Seleccionar distrito</option>
           {distritos.map((dist) => (
             <option key={dist.id} value={dist.id}>{dist.name}</option>
           ))}
         </select>
-        <label>Distrito</label>
+        {/* <label>Distrito</label> */}
       </div>
     </div>
   </div>
